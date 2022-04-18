@@ -1,0 +1,82 @@
+@import 'general';
+@import 'colors';
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	width: 86%;
+	min-height: 200px;
+	background-color: $white;
+	padding: 1.45em;
+	border-radius: 1.5em;
+
+	.image-box {
+		width: 100%;
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			width: 100%;
+			border-radius: 1em;
+			// height: 100px;
+			// object-fit: cover;
+		}
+	}
+	.content-box {
+		padding: 1em;
+		text-align: center;
+		margin-top: 1.1em;
+		margin-bottom: 0.7em;
+
+		.title {
+			font-size: 1.95rem;
+			color: $darkblue;
+			font-weight: bold;
+		}
+		.text {
+			margin-top: 0.8em;
+			font-size: 1.35rem;
+			color: hsla(217, 45%, 22%, 0.637);
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.card {
+		max-width: 21.5em;
+		padding: 1.15em;
+		transform: scale(1.4);
+		transition: transform 0.3s;
+		user-select: none;
+
+		.image-box {
+			img {
+				width: 100%;
+			}
+		}
+		.content-box {
+			padding: 0.4em;
+			margin-bottom: 1em;
+			.title {
+				font-size: 1.45rem;
+				font-weight: 700;
+			}
+
+			.text {
+				margin-top: 1.2em;
+				font-size: 1rem;
+			}
+		}
+	}
+
+	.card:hover {
+		transform: scale(1.3);
+	}
+}
